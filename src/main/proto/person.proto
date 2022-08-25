@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package br.com.poc.grpcPoc.adapters.grpc;
+
+service PersonService{
+  rpc ConsultaPessoa(PersonRequest) returns (PersonResponse){
+  }
+}
+
+message PersonRequest {
+  string cpf = 1;
+}
+
+message PersonResponse {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+}
